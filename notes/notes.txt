@@ -1,0 +1,34 @@
+Notes: What has been researched to start doing minor tests?
+
+10/18/15 Have put all the code onto ENG-1 PC to start looking at the code.
+
+10/24/15 Starting to check out how the various pieces of code ".pysattunner.py", "devicemanager.py", "snmpquery.py",
+ "configloader.py", "settings.py", "curl_json.sh", "start.sh", "nohup.out", and "README.md" are interconnected.
+Appears that main code ".pysattunner.py" runs through "devicemanager.py" and "snmpquery.py".  Have to determine how
+other code is called.
+
+11/20/15 Found the "gitlab" machine and hooked it up to 10.21.18.200. I can ssh into this debian machine and see how
+this machine was used to run tests.  Looked at the output of history, and found lots of commands and ways the code
+was put together.
+
+11/23/15 Have to start a basic tree of what code is called first.
+
+12/03/15 Met with Adrian at their house.  He loaded up his laptop with all the code, I remoted into my PC that has
+the code running and had networking to the devices.  We went through the main construct of the code, and started
+to understand how the "uri" is formed, such as: "http://localhost:5000/queries/t1290_symbol_rate".  Also got some
+understanding on how to start up the "pysattuner.py" program in a python virtual environment (virtualenv), and
+see how the program puts out JSON script after a request is made. You have to use the "ps ux" command to show the
+Used the "curl" command to put out requests to show the processes running with a grep command to kill the program
+if needed.  Also noted that we had to do some "pip-install" commands to bring in "pysnmp" and "pytz".  There was
+also a need to install mongodb, and also run it.  Used some "systemctl" commands as well to verify that mongodb
+was running. While connected to the network, I couldn't get any values from the IPs that we were connecting to
+via the configuration files.  Told Adrian that I would try locally to establish connections next time I was at
+PACTV LA. 
+
+12/14/15 Had been trying for about a week and a half to see why the "OID not found" was returned when trying to
+connect to either the 1290, 1260, or XRF router.  Today I realized that the config files for the 1290 and 1260
+were using the IP Address 10.21.18.111, which was the Dexing NDS3975 IRD in our PACTV LA MCR.  So I changed the
+IP Address on the config file for the 1290 for the IP that is currently on the TAND-3 IRD (10.21.18.113).
+Now it seems to be working.  I've issued the command "http://localhost:5000/queries/1290_symbol_rate", and seen
+the value to be the same as what exists on TAND-3 IRD.  I changed the symbol rate manually on the TAND-3 IRD and
+have seen the value change in the query response. 

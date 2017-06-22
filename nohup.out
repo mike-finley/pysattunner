@@ -1,0 +1,111 @@
+ * Running on http://0.0.0.0:5000/
+ * Restarting with reloader
+10.21.18.125 - - [25/Jul/2014 18:24:03] "GET / HTTP/1.1" 200 -
+10.21.18.125 - - [25/Jul/2014 18:24:08] "GET /queries/ HTTP/1.1" 200 -
+10.21.18.125 - - [28/Jul/2014 16:07:24] "GET / HTTP/1.1" 200 -
+10.21.18.125 - - [28/Jul/2014 16:07:25] "GET /favicon.ico HTTP/1.1" 404 -
+10.21.18.125 - - [28/Jul/2014 16:08:46] "GET /devices HTTP/1.1" 200 -
+10.21.18.125 - - [28/Jul/2014 17:41:07] "GET /devices/t1260 HTTP/1.1" 200 -
+10.21.18.125 - - [28/Jul/2014 17:58:09] "GET /queries/t1260_service_health HTTP/1.1" 200 -
+10.21.18.18 - - [29/Jul/2014 10:53:47] "GET / HTTP/1.1" 200 -
+10.21.18.18 - - [29/Jul/2014 10:53:47] "GET /favicon.ico HTTP/1.1" 404 -
+10.21.18.18 - - [29/Jul/2014 10:53:58] "GET /devices HTTP/1.1" 200 -
+10.21.18.18 - - [29/Jul/2014 10:54:39] "GET /devices/t1290_signal_modulation_type HTTP/1.1" 404 -
+10.21.18.18 - - [29/Jul/2014 10:54:58] "GET /queries/ HTTP/1.1" 200 -
+10.21.18.18 - - [29/Jul/2014 10:55:18] "GET /queries/t1260_service_health HTTP/1.1" 200 -
+10.21.18.129 - - [30/Jul/2014 23:03:10] "GET / HTTP/1.1" 200 -
+10.21.18.129 - - [30/Jul/2014 23:03:24] "GET / HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:33:54] "GET /devices HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:33:54] "GET /favicon.ico HTTP/1.1" 404 -
+10.21.18.125 - - [13/Aug/2014 15:34:26] "GET /devices HTTP/1.1" 304 -
+10.21.18.125 - - [13/Aug/2014 15:37:45] "GET /devices/53d3032f2d52da2a0d8561a2 HTTP/1.1" 404 -
+10.21.18.125 - - [13/Aug/2014 15:38:04] "GET /t1290 HTTP/1.1" 404 -
+10.21.18.125 - - [13/Aug/2014 15:38:23] "GET /queries HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:38:44] "GET /queries/53d3032f2d52da2a0d85619e HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/eve/endpoints.py", line 91, in item_endpoint
+    response = getitem(resource, **lookup)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/eve/methods/common.py", line 229, in rate_limited
+    return f(*args, **kwargs)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/eve/auth.py", line 57, in decorated
+    return f(*args, **kwargs)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/eve/methods/common.py", line 670, in decorated
+    getattr(app, event_name + '_' + resource)(*rh_params)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/events/events.py", line 77, in __call__
+    f(*a, **kw)
+  File "/home/pactv/pysattuner-py.git/pysattuner.py", line 49, in query_get_callback
+    query = lookup['name'].split('_', 1)[1]
+IndexError: list index out of range
+10.21.18.125 - - [13/Aug/2014 15:38:44] "GET /queries/53d3032f2d52da2a0d85619e?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:38:44] "GET /queries/53d3032f2d52da2a0d85619e?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:38:44] "GET /queries/53d3032f2d52da2a0d85619e?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:38:44] "GET /queries/53d3032f2d52da2a0d85619e?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:38:44] "GET /queries/53d3032f2d52da2a0d85619e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:38:44] "GET /queries/53d3032f2d52da2a0d85619e?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:38:44] "GET /queries/53d3032f2d52da2a0d85619e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:39:04] "GET /queries/53d3032f2d52da2a0d8561a3 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/eve/endpoints.py", line 91, in item_endpoint
+    response = getitem(resource, **lookup)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/eve/methods/common.py", line 229, in rate_limited
+    return f(*args, **kwargs)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/eve/auth.py", line 57, in decorated
+    return f(*args, **kwargs)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/eve/methods/common.py", line 670, in decorated
+    getattr(app, event_name + '_' + resource)(*rh_params)
+  File "/home/pactv/pysattuner-py.git/env/lib/python3.4/site-packages/events/events.py", line 77, in __call__
+    f(*a, **kw)
+  File "/home/pactv/pysattuner-py.git/pysattuner.py", line 49, in query_get_callback
+    query = lookup['name'].split('_', 1)[1]
+IndexError: list index out of range
+10.21.18.125 - - [13/Aug/2014 15:39:04] "GET /queries/53d3032f2d52da2a0d8561a3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:39:04] "GET /queries/53d3032f2d52da2a0d8561a3?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:39:04] "GET /queries/53d3032f2d52da2a0d8561a3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:39:04] "GET /queries/53d3032f2d52da2a0d8561a3?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:39:04] "GET /queries/53d3032f2d52da2a0d8561a3?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:39:04] "GET /queries/53d3032f2d52da2a0d8561a3?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:39:04] "GET /queries/53d3032f2d52da2a0d8561a3?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.21.18.125 - - [13/Aug/2014 15:39:11] "GET /queries/53d3032f2d52da2a0d8561a3?__debugger__=yes&cmd=source&frm=3049113836&s=ycLgIwMQdssvmGz9bHkP HTTP/1.1" 200 -
+10.21.18.125 - - [01/Oct/2014 11:48:52] "GET /devices HTTP/1.1" 200 -
+10.21.18.125 - - [01/Oct/2014 11:48:52] "GET /favicon.ico HTTP/1.1" 404 -
+10.21.18.125 - - [01/Oct/2014 11:49:01] "GET / HTTP/1.1" 200 -

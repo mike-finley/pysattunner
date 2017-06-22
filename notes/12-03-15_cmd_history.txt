@@ -1,0 +1,199 @@
+  382  startx
+  383  ll
+  384  exit
+  385  ll
+  386  cd work-projects/
+  387  ll
+  388  cd py
+  389  ping 10.21.18.111
+  390  ll
+  391  cd pysattuner-py/
+  392  ll
+  393  sh start.sh
+  394  wget https://github.com/pactv/pysattunner-py/blob/master/curbuild.tar.bz2?raw=true
+  395  sudo pacman -S wget
+  396  wget https://github.com/pactv/pysattunner-py/blob/master/curbuild.tar.bz2?raw=true
+  397  wget https://github.com/pactv/pysattuner-py/blob/master/curbuild.tar.bz2?raw=true
+  398  mv curbuild.tar.bz2\?raw\=true curbuild.tar.bz2
+  399  ll
+  400  tar -jxvf curbuild.tar.bz2 
+  401  sh start.sh 
+  402  pip install eve
+  403  sudo pacman -S eve
+  404  yaourt pip
+  405  sudo pacman -S python-pip
+  406  sudo pacman -Syy
+  407  sudo pacman -S python-pip
+  408  sh start.sh 
+  409  sudo pacman -S eve
+  410  pip install eve
+  411  sudo pip install eve
+  412  sh start.sh 
+  413  sudo pip install pytz
+  414  sh start.sh 
+  415  sudo pip install pysnmp
+  416  sh start.sh 
+  417  curl -XGET http://localhost:5000/queries | python -m json.tool
+  418  pip install pymongo
+  419  pacman -S mongo-db
+  420  sudo pacman -S mongo-db
+  421  yaourt mongo
+  422  sudo pacman -S mongodb
+  423  service mongodb
+  424  systemctl
+  425  systemctl start mongodb
+  426  sudo
+  427  sdfdsf
+  428  sdjfksdlreset:
+  429  reset ; clear
+  430  sudo systemctl start mongodb
+  431  curl -XGET http://localhost:5000/queries | python -m json.tool
+  432  curl -XGET http://localhost:5000/queries/t1290_signal_modulation_type | python -m json.tool
+  433  curl -XGET http://localhost:5000/queries/t1290_signal_modulation | python -m json.tool
+  434  mongo
+  435  ps ux | grep pysattuner.py 
+  436  kill 26737
+  437  ps ux | grep pysattuner.py 
+  438  start.sh
+  439  sh start.sh
+  440  curl -XGET http://localhost:5000/queries/t1290_signal_modulation | python -m json.tool
+  441  curl -XGET http://localhost:5000/queries/t1290_signal_modulation_type | python -m json.tool
+  442  ping 10.215.10.7
+  443  curl -XGET http://localhost:5000/queries/xrf6_output_6_input | python -m json.tool
+  444  curl -XGET http://localhost:5000/queries/t1260_service_health | python -m json.tool
+  445  sudo pacman -S snmp
+  446  yaourt snmp | less
+  447  pkgfile -s
+  448  pkgfile 
+  449  yaourt snmp | less
+  450  sudo pacman -S snmp-net
+  451  yaourt snmp | less
+  452  sudo pacman -S net-snmp
+  453  man net-snmp
+  454  net-snmp
+  455  yaourt snmpwalk | les
+  456  yaourt snmpwalk | less
+  457  which snmpwalk
+  458  snmpwalk -v1 -c public 10.21.18.111
+  459  ll
+  460  cd ~
+  461  ll
+  462  cd work-projects/pysattuner-py/
+  463  pacman -Q
+  464  pacman -Q | less
+  465  sudo pacman -S strace
+  466  strace snmpwalk -v1 -c public 10.21.18.111
+  467  strace snmpwalk -v1 -c public 10.21.10.7
+  468  strace snmpwalk -v1 -c public 10.215.10.7
+  469  ping 10.215.10.7
+  470  snmpwalk -v1 -c public 10.215.10.7 1.3.6.1.4.1.6827.50.28.3.5.1.3.6
+  471  snmpwalk -v1 -c public 10.21.18.111 1.3.6.1.4.1.1773.1.3.200.4.3.3.2.2.1.16.4
+  472  strace snmpwalk -v1 -c public 10.21.18.111 1.3.6.1.4.1.1773.1.3.200.4.3.3.2.2.1.16.4
+  473  snmpwalk -d -v1 -c public 10.21.18.111 1.3.6.1.4.1.1773.1.3.200.4.3.3.2.2.1.16.4
+  474  curl -XGET http://localhost:5000/queries/t1290_symbol_rate | python -m json.tool
+  475  exit
+  476  cd work-projects/pysattuner-py/ll
+  477  ll
+  478  cd work-projects/pysattuner-py/
+  479  ll
+  480  cd conf
+  481  ls
+  482  vim t1290.conf 
+  483  exit
+  484  ls
+  485  cd work-projects/
+  486  ls
+  487  cd pysattuner-py/
+  488  ls
+  489  vim pysattuner.py 
+  490  vim work-projects/pysattuner-py/README.md 
+  491  vim ~/work-projects/pysattuner-py/configloader.py 
+  492  vim ~/work-projects/pysattuner-py/devicemanager.py 
+  493  ll
+  494  ssh 10.21.18.200
+  495  ssh 10.21.18.200
+  496  ssh pactv@10.21.18.200
+  497  exit
+  498  shutdown now
+  499  startx
+  500  ll
+  501  cd work-projects/
+  502  cd
+  503  cd work-projects/pysattuner-py/
+  504  cd 
+  505  ll
+  506  cd work-projects/
+  507  cd pysattuner-py/
+  508  ll
+  509  history
+  510  ll
+  511  vim notes.txt 
+  512  cd ..
+  513  ll
+  514  cd backup/
+  515  ll
+  516  mv nohup.out nohup.out_from_gitlab
+  517  vim history_adrian_testing_12-04-15.txt
+  518  history
+  519  s
+  520  ls
+  521  cd ..
+  522  ll
+  523  vim .notes.swp 
+  524  rm .notes.swp 
+  525  ll
+  526  cd backup/
+  527  ll
+  528  cd ..
+  529  cd pysattuner-py/
+  530  ll
+  531  vim curl_json.sh 
+  532  cd tests/
+  533  ls
+  534  cd ..
+  535  vim notes.txt 
+  536  ll
+  537  rm .snmpquery.py.swp 
+  538  cd ..
+  539  ll
+  540  ll
+  541  cd backup/
+  542  ll
+  543  cd ..
+  544  ll
+  545  cd pysattuner-py/
+  546  ll
+  547  cd 
+  548  ll
+  549  cd work-projects/
+  550  ll
+  551  cd backup/
+  552  ll
+  553  cd ..
+  554  ll
+  555  cd p
+  556  cd pysattuner-py/
+  557  ll
+  558  vim notes.txt 
+  559  cd conf
+  560  ll
+  561  cd ..
+  562  cd env
+  563  ll
+  564  cd bin/
+  565  ll
+  566  cd ..
+  567  ll
+  568  cd include/
+  569  ll
+  570  cd ..
+  571  cd ..
+  572  ll
+  573  history
+  574  ll
+  575  mkdir notes
+  576  mv notes.txt ~/work-projects/pysattuner-py/notes
+  577  ll
+  578  history
+[mike@vbox pysattuner-py]$ 
+

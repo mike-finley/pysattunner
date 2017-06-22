@@ -1,0 +1,2 @@
+DOMAIN = {'accounts': {}}
+XML = False

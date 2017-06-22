@@ -1,0 +1,18 @@
+#This shows some notes on how I've seen the relationship between most of the
+#functions and iterations in the following files:
+
+#Note that this will get explained from data flow representation.
+
+#"pysattuner.py", 
+#"devicemanager.py",
+#"configloader.py", 
+#"snmpquery.py", 
+#"curbuild.tar.bz2", 
+#"curl_json.sh",
+#"settings.py", 
+#"start.sh", 
+#"dev_settings.py", 
+
+#File: snmpquery.py hosts a function named "get_by_oid", 
+#which is then used in the File: devicemanager.py in a function named "snmp_get",
+#which is then used in the File: pysattuner.py in a function named "query_get_callback" 
